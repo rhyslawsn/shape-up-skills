@@ -1,0 +1,161 @@
+{
+  "kind": "breadboard",
+  "version": 1,
+  "title": "Autopay",
+  "question": "How do customers turn on Autopay?",
+  "places": [
+    {
+      "name": "Invoice",
+      "existing": true,
+      "affordances": [
+        {
+          "label": "Pay now",
+          "to": "Payment form",
+          "condition": null
+        },
+        {
+          "label": "Turn on Autopay",
+          "to": "Setup Autopay",
+          "condition": null
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Payment form",
+      "existing": false,
+      "affordances": [
+        {
+          "label": "Card fields",
+          "to": null,
+          "condition": null
+        },
+        {
+          "label": "Use this to Autopay? (checkbox)",
+          "to": null,
+          "condition": null
+        },
+        {
+          "label": "Pay",
+          "to": "Confirmation",
+          "condition": null
+        }
+      ],
+      "notes": [
+        "Checkbox only shows for recurring invoices"
+      ]
+    },
+    {
+      "name": "Setup Autopay",
+      "existing": false,
+      "affordances": [
+        {
+          "label": "Card fields",
+          "to": null,
+          "condition": null
+        },
+        {
+          "label": "Pay current invoice too?",
+          "to": null,
+          "condition": null
+        },
+        {
+          "label": "Save",
+          "to": "Confirmation",
+          "condition": "card valid"
+        },
+        {
+          "label": "Cancel",
+          "to": "Invoice",
+          "condition": null
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Confirmation",
+      "existing": false,
+      "affordances": [
+        {
+          "label": "\"Autopay is on\" message",
+          "to": null,
+          "condition": null
+        },
+        {
+          "label": "Done",
+          "to": "Invoice",
+          "condition": null
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Invoicer dashboard",
+      "existing": true,
+      "affordances": [
+        {
+          "label": "Disable Autopay",
+          "to": "Invoice",
+          "condition": null
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "connections": [
+    {
+      "from": "Invoice",
+      "via": "Pay now",
+      "to": "Payment form",
+      "condition": null
+    },
+    {
+      "from": "Invoice",
+      "via": "Turn on Autopay",
+      "to": "Setup Autopay",
+      "condition": null
+    },
+    {
+      "from": "Payment form",
+      "via": "Pay",
+      "to": "Confirmation",
+      "condition": null
+    },
+    {
+      "from": "Setup Autopay",
+      "via": "Save",
+      "to": "Confirmation",
+      "condition": "card valid"
+    },
+    {
+      "from": "Setup Autopay",
+      "via": "Cancel",
+      "to": "Invoice",
+      "condition": null
+    },
+    {
+      "from": "Confirmation",
+      "via": "Done",
+      "to": "Invoice",
+      "condition": null
+    },
+    {
+      "from": "Invoicer dashboard",
+      "via": "Disable Autopay",
+      "to": "Invoice",
+      "condition": null
+    }
+  ],
+  "new_places": [
+    "Payment form",
+    "Setup Autopay",
+    "Confirmation"
+  ],
+  "open_questions": [
+    {
+      "place": "Payment form",
+      "note": "Checkbox only shows for recurring invoices"
+    }
+  ],
+  "source": "# Invoice [existing]\n- Pay now -> Payment form\n- Turn on Autopay -> Setup Autopay\n\n# Payment form\n- Card fields\n- Use this to Autopay? (checkbox)\n- Pay -> Confirmation\n> Checkbox only shows for recurring invoices\n\n# Setup Autopay\n- Card fields\n- Pay current invoice too?\n- Save -> Confirmation : card valid\n- Cancel -> Invoice\n\n# Confirmation\n- \"Autopay is on\" message\n- Done -> Invoice\n\n# Invoicer dashboard [existing]\n- Disable Autopay -> Invoice\n"
+}

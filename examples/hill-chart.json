@@ -1,0 +1,93 @@
+{
+  "kind": "hill-chart",
+  "version": 1,
+  "project": "Example: Message drafts",
+  "cycle": {
+    "start": "2026-09-28",
+    "end": "2026-11-06"
+  },
+  "scopes": [
+    {
+      "id": "start-new",
+      "name": "Start new",
+      "risk": "normal"
+    },
+    {
+      "id": "locate",
+      "name": "Locate",
+      "risk": "normal"
+    },
+    {
+      "id": "trash",
+      "name": "Trash",
+      "risk": "normal"
+    },
+    {
+      "id": "send",
+      "name": "Send",
+      "risk": "normal"
+    },
+    {
+      "id": "store",
+      "name": "Store",
+      "risk": "high"
+    },
+    {
+      "id": "reply",
+      "name": "Reply",
+      "risk": "normal"
+    },
+    {
+      "id": "autosave",
+      "name": "Autosave",
+      "risk": "high"
+    }
+  ],
+  "updates": [
+    {
+      "at": "2026-09-29",
+      "by": null,
+      "positions": {
+        "autosave": 20,
+        "start-new": 10,
+        "store": 15
+      },
+      "note": null
+    },
+    {
+      "at": "2026-10-01",
+      "by": null,
+      "positions": {
+        "autosave": 25,
+        "locate": 15,
+        "start-new": 40,
+        "store": 35,
+        "trash": 10
+      },
+      "note": null
+    },
+    {
+      "at": "2026-10-02",
+      "by": null,
+      "positions": {
+        "locate": 55,
+        "send": 20,
+        "start-new": 100,
+        "store": 50,
+        "trash": 40
+      },
+      "note": null
+    },
+    {
+      "at": "2026-10-04",
+      "by": null,
+      "positions": {
+        "locate": 80,
+        "send": 45,
+        "store": 70,
+        "trash": 30
+      },
+      "note": "Trash: undo needs a background job"
+    }
+  ]
+}

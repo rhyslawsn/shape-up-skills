@@ -1,0 +1,188 @@
+{
+  "kind": "fat-marker-sketch",
+  "version": 1,
+  "title": "Dinner plan",
+  "question": "Where does 'cooked' live on the weekly list?",
+  "canvas": {
+    "w": 760,
+    "h": 480
+  },
+  "seed": 3,
+  "marker": 7,
+  "summary": {
+    "text": [
+      "This week's dinners",
+      "Mon",
+      "Tue",
+      "Wed"
+    ],
+    "buttons": [
+      {
+        "label": "+ Add",
+        "primary": true
+      }
+    ],
+    "fields": [],
+    "checkboxes": 3,
+    "images": 3,
+    "notes": [],
+    "callouts": [
+      {
+        "n": 1,
+        "target": [
+          655,
+          105
+        ],
+        "note": "Tick = cooked, moves to bottom"
+      },
+      {
+        "n": 2,
+        "target": [
+          455,
+          222
+        ],
+        "note": "Recipe title + 1 line, no ratings"
+      }
+    ],
+    "legend": [
+      "Tick = cooked, moves to bottom",
+      "Recipe title + 1 line, no ratings"
+    ]
+  },
+  "ops": [
+    {
+      "op": "box",
+      "x": 0,
+      "y": 0,
+      "w": 760,
+      "h": 480
+    },
+    {
+      "op": "text",
+      "x": 30,
+      "y": 40,
+      "s": "This week's dinners",
+      "size": 30
+    },
+    {
+      "op": "button",
+      "x": 590,
+      "y": 20,
+      "w": 140,
+      "h": 44,
+      "label": "+ Add",
+      "filled": true
+    },
+    {
+      "op": "text",
+      "x": 30,
+      "y": 110,
+      "s": "Mon",
+      "size": 24
+    },
+    {
+      "op": "image",
+      "x": 110,
+      "y": 80,
+      "w": 110,
+      "h": 80
+    },
+    {
+      "op": "scribble",
+      "x": 245,
+      "y": 100,
+      "w": 280,
+      "lines": 2,
+      "gap": 28
+    },
+    {
+      "op": "checkbox",
+      "x": 660,
+      "y": 96,
+      "checked": true
+    },
+    {
+      "op": "text",
+      "x": 30,
+      "y": 220,
+      "s": "Tue",
+      "size": 24
+    },
+    {
+      "op": "image",
+      "x": 110,
+      "y": 190,
+      "w": 110,
+      "h": 80
+    },
+    {
+      "op": "scribble",
+      "x": 245,
+      "y": 210,
+      "w": 280,
+      "lines": 2,
+      "gap": 28
+    },
+    {
+      "op": "checkbox",
+      "x": 660,
+      "y": 206,
+      "checked": false
+    },
+    {
+      "op": "text",
+      "x": 30,
+      "y": 330,
+      "s": "Wed",
+      "size": 24
+    },
+    {
+      "op": "image",
+      "x": 110,
+      "y": 300,
+      "w": 110,
+      "h": 80
+    },
+    {
+      "op": "scribble",
+      "x": 245,
+      "y": 320,
+      "w": 280,
+      "lines": 2,
+      "gap": 28
+    },
+    {
+      "op": "checkbox",
+      "x": 660,
+      "y": 316,
+      "checked": false
+    },
+    {
+      "op": "callout",
+      "n": 1,
+      "x": 600,
+      "y": 120,
+      "target": [
+        655,
+        105
+      ]
+    },
+    {
+      "op": "callout",
+      "n": 2,
+      "x": 560,
+      "y": 250,
+      "target": [
+        455,
+        222
+      ]
+    },
+    {
+      "op": "legend",
+      "items": [
+        "Tick = cooked, moves to bottom",
+        "Recipe title + 1 line, no ratings"
+      ]
+    }
+  ]
+}
